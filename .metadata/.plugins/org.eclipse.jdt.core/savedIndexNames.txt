@@ -1,2 +1,0 @@
-INDEX VERSION 1.130+/Users/mac/eclipse-workspace/.metadata/.plugins/org.eclipse.jdt.core
-620264331.index
