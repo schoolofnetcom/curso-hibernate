@@ -1,14 +1,11 @@
 package com.schoolofnet.crud_r;
 
+// import java.util.List;
+
 import org.hibernate.Session;
 
-import com.schoolofnet.model.Address;
 import com.schoolofnet.model.HibernateSession;
-import com.schoolofnet.model.Options;
-import com.schoolofnet.model.User;
-
-import java.util.ArrayList;
-import java.util.List;
+import com.schoolofnet.model.Product;
 
 /**
  * Hello world!
@@ -20,29 +17,29 @@ public class App
     {
     		Session session = HibernateSession.getSessionFactory().openSession();
     		
-    		User user = new User();
-    		Address address = new Address();
-    		Options optionsInst = new Options();
+    		session.beginTransaction();
     		
-    		optionsInst.setName("dklada");
-    		List<Options> options = new ArrayList<Options>();
+    		Product product = new Product();
     		
-    		options.add(optionsInst);
+    		product.setName("P 1");
+    		product.setPrice(10.00);
     		
-    		address.setNumber(900);
-    		address.setStreet("Down town");
+    		// session.save(product); 
     		
-    		user.setUsername("Leonanluppi");
-    		user.setName("Leonan");
-    		user.setLastname("Luppi");
+    		// Deprecated    		
+    		// List<Product> products = session.createCriteria(Product.class).list();
+
+    		// Deprecated     		
+    		// List<Product> products = session.createQuery("from Product").list();
     		
-    		address.setUser(user);
-    		user.setAddress(address);
-    		user.setOptions(options);
+    		// Listando todos os itens (Descomentar para teste. Lembrar de descomentar o import do java.util.List, no topo do arquivo)
+    		// List<Product> products = session.createQuery("from Product").getResultList();
     		
-        System.out.println( "Hello World!" );
-        System.out.println( session );
-        System.out.println(user.getName() + " " + user.getLastname());
-        System.out.println(user.getAddress().getStreet());
+    		// Listando um item específico através da primary key
+    		Product p1 = session.find(Product.class, 3);
+    		
+    		System.out.println(p1.getName());
+    		
+    		session.getTransaction().commit();
     }
 }

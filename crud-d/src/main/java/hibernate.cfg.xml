@@ -12,5 +12,6 @@
 		<mapping class="com.schoolofnet.model.User"></mapping>
 		<mapping class="com.schoolofnet.model.Address"></mapping>
 		<mapping class="com.schoolofnet.model.Options"></mapping>
+		<mapping class="com.schoolofnet.model.Product"></mapping>
 	</session-factory>
 </hibernate-configuration>
