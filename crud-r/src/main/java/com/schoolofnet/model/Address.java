@@ -20,13 +20,13 @@ public class Address implements Serializable{
 	@Column(name = "id")
 	private Integer id;
 	
-	@Column(name = "street")
+	@Column
 	private String street;
 	
-	@Column(name = "number")
+	@Column
 	private Integer number;
 	
-	@Column(name = "user")
+	@Column
 	private User user;
 	
 	public Integer getId() {

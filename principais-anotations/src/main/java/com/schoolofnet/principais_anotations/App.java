@@ -1,4 +1,4 @@
-package com.schoolofnet.principais_notations;
+package com.schoolofnet.principais_anotations;
 
 import org.hibernate.Session;
 

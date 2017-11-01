@@ -38,10 +38,10 @@ public class User implements Serializable{
 	@Column(name = "createDate")
 	private Date createDate;
 	
-	@Column(name = "address")
+	@Column
 	private Address address;
 	
-	@Column(name = "options")
+	@Column
 	@ElementCollection
 	private List<Options> options;
 	

@@ -14,7 +14,7 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "User")
+@Table(name = "user")
 public class User implements Serializable{
 
 	private static final long serialVersionUID = 1L;
@@ -36,10 +36,10 @@ public class User implements Serializable{
 	@Column(name = "createDate")
 	private Date createDate;
 	
-	@Column(name = "address")
+	@Column
 	private Address address;
 	
-	@Column(name = "options")
+	@Column
 	@ElementCollection
 	private List<Options> options;
 	

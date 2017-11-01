@@ -19,13 +19,13 @@ public class Options implements Serializable{
 
 	@Id
 	@GeneratedValue
-	@Column(name = "id")
+	@Column
 	private Integer id;
 	
-	@Column(name = "name")
+	@Column
 	private String name;
 	
-	@Column(name = "user")
+	@Column
 	private User user;
 	
 	public Integer getId() {
